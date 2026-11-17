@@ -1,3 +1,56 @@
 <resources>
     <string name="app_name">EduSync</string>
+
+    <!-- General / Common -->
+    <string name="btn_save">Lưu</string>
+    <string name="btn_update">Cập nhật</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="btn_back">Quay lại</string>
+    <string name="required_mark"> *</string>
+
+    <!-- Class Management (Nhóm 03) -->
+    <string name="title_class_management">Quản lý Lớp học</string>
+    <string name="search_class_hint">Tìm kiếm lớp...</string>
+    <string name="title_add_class">Thêm Lớp học</string>
+    <string name="title_edit_class">Chỉnh sửa Lớp học</string>
+    <string name="label_class_code">Mã lớp học *</string>
+    <string name="hint_class_code">Nhập mã lớp (VD: CNTT01)</string>
+    <string name="label_class_name">Tên lớp học *</string>
+    <string name="hint_class_name">Nhập tên lớp học</string>
+    <string name="label_class_course">Khóa học / Niên khóa *</string>
+    <string name="hint_class_course">Nhập khóa học (VD: 2026 - 2027)</string>
+    <string name="label_class_department">Khoa / Chuyên ngành</string>
+    <string name="hint_class_department">Chọn khoa / chuyên ngành</string>
+    <string name="label_class_max_students">Sĩ số sinh viên dự kiến</string>
+    <string name="hint_class_max_students">Nhập số lượng sinh viên</string>
+    <string name="label_class_note">Ghi chú</string>
+    <string name="hint_class_note">Nhập thông tin ghi chú bổ sung...</string>
+    <string name="empty_class_list">Chưa có lớp học nào</string>
+    <string name="empty_class_sub">Nhấn nút (+) để thêm lớp học mới</string>
+    <string name="prefix_course">Khóa: </string>
+    <string name="unit_students">SV</string>
+
+    <!-- Subject Management (Nhóm 03) -->
+    <string name="title_subject_management">Quản lý Môn học</string>
+    <string name="search_subject_hint">Tìm kiếm môn học...</string>
+    <string name="title_add_subject">Thêm Môn học</string>
+    <string name="title_edit_subject">Chỉnh sửa Môn học</string>
+    <string name="label_subject_code">Mã môn học *</string>
+    <string name="hint_subject_code">Nhập mã môn (VD: IT001)</string>
+    <string name="label_subject_name">Tên môn học *</string>
+    <string name="hint_subject_name">Nhập tên môn học (VD: Lập trình Java)</string>
+    <string name="label_subject_credits">Số tín chỉ *</string>
+    <string name="hint_subject_credits">Chọn số tín chỉ</string>
+    <string name="label_subject_type">Loại môn học</string>
+    <string name="type_compulsory">Bắt buộc</string>
+    <string name="type_elective">Tự chọn</string>
+    <string name="label_theory_hours">Số tiết lý thuyết</string>
+    <string name="hint_theory_hours">Nhập số tiết (VD: 30)</string>
+    <string name="label_practice_hours">Số tiết thực hành</string>
+    <string name="hint_practice_hours">Nhập số tiết (VD: 15)</string>
+    <string name="label_subject_description">Mô tả / Đề cương</string>
+    <string name="hint_subject_description">Nhập mô tả tóm tắt môn học...</string>
+    <string name="empty_subject_list">Chưa có môn học nào</string>
+    <string name="empty_subject_sub">Nhấn nút (+) để thêm môn học mới</string>
+    <string name="unit_credits">tín chỉ</string>
 </resources>
