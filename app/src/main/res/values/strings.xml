@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">EduSync</string>
+    <string name="app_subtitle">Quản lý Sinh viên\nvà Điểm học phần</string>
+    <string name="slogan_part1">Tri thức hôm nay</string>
+    <string name="slogan_part2">Thành công ngày mai</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Đăng nhập</string>
+    <string name="login_subtitle">Chào mừng trở lại!</string>
+    <string name="username_hint">Tên đăng nhập</string>
+    <string name="password_hint">Mật khẩu</string>
+    <string name="remember_login">Ghi nhớ đăng nhập</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="btn_login">Đăng nhập</string>
+
+    <!-- Main Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_students">Sinh viên</string>
+    <string name="nav_statistics">Thống kê</string>
+    <string name="nav_profile">Cá nhân</string>
+
+    <!-- Home Screen -->
+    <string name="greeting_user">Xin chào,</string>
+    <string name="default_user_name">Nguyễn Minh Luân</string>
+    <string name="home_subtitle">Chúc bạn một ngày học tập hiệu quả!</string>
+    <string name="quick_access_title">Truy cập nhanh</string>
+    <string name="recent_activities_title">Hoạt động gần đây</string>
+    <string name="see_all">Xem tất cả</string>
+    <string name="stat_students_label">Sinh viên</string>
+    <string name="stat_classes_label">Lớp học</string>
+    <string name="stat_subjects_label">Môn học</string>
+    <string name="stat_courses_label">Học phần</string>
+    <string name="action_students">Sinh viên</string>
+    <string name="action_classes">Lớp học</string>
+    <string name="action_subjects">Môn học</string>
+    <string name="action_courses">Học phần</string>
+    <string name="sample_activity_title">Nhập điểm học phần</string>
+    <string name="sample_activity_desc">Lập trình Java – HK1</string>
 </resources>

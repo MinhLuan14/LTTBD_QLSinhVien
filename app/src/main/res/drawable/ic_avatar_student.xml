@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <!-- Outer Circle Background -->
+    <path
+        android:fillColor="#DBEAFE"
+        android:pathData="M32,0 A32,32 0 1,0 32,64 A32,32 0 1,0 32,0 Z" />
+    <!-- Student Body / Jacket -->
+    <path
+        android:fillColor="#1D4ED8"
+        android:pathData="M18,58 C18,48 24,44 32,44 C40,44 46,48 46,58 L46,64 L18,64 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M29,44 L32,50 L35,44 Z" />
+    <!-- Neck -->
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M29,38 L35,38 L35,45 L29,45 Z" />
+    <!-- Face -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M24,26 C24,20 28,16 32,16 C36,16 40,20 40,26 C40,34 36,39 32,39 C28,39 24,34 24,26 Z" />
+    <!-- Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M23,24 C23,17 27,13 32,13 C37,13 41,17 41,24 C41,25 39,21 36,21 C33,21 32,18 29,21 C26,24 24,24 23,24 Z" />
+    <!-- Graduation Cap -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M32,6 L48,13 L32,19 L16,13 Z" />
+    <path
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="1.5"
+        android:pathData="M44,14 L45,22" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M44,22 C44,22.8 44.7,23.5 45.5,23.5 C46.3,23.5 47,22.8 47,22 Z" />
+</vector>

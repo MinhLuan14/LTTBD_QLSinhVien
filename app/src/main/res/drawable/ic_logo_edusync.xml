@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Graduation Cap -->
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M48,16 L88,32 L48,48 L8,32 Z" />
+    <path
+        android:fillColor="#0D52C1"
+        android:pathData="M24,40 L24,56 C24,66 34,74 48,74 C62,74 72,66 72,56 L72,40 L48,50 Z" />
+    <!-- Tassel -->
+    <path
+        android:strokeColor="#1769E8"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M78,34 L82,54" />
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M80,54 C80,56.2 81.8,58 84,58 C86.2,58 88,56.2 88,54 C88,51.8 86.2,50 84,50 C81.8,50 80,51.8 80,54 Z" />
+    <!-- Open Book Base -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M48,64 C42,60 30,58 14,60 L14,78 C30,76 42,78 48,82 C54,78 66,76 82,78 L82,60 C66,58 54,60 48,64 Z" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M48,64 L48,82" />
+</vector>

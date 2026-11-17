@@ -5,15 +5,64 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Top App Bar / Toolbar (Optional / Configurable) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/card_background"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/text_primary" />
+
+    <!-- Fragment Container (Clean bounds, never overlaps Bottom Navigation) -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/viewNavDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarMain">
+
+        <!-- Hiển thị giao diện Trang chủ -->
+        <include layout="@layout/fragment_home" />
+    </FrameLayout>
+
+    <!-- Thin Divider Line above Bottom Navigation -->
+    <View
+        android:id="@+id/viewNavDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/border_color"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Bottom Navigation Bar with 4 required tabs -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavMain"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:background="@color/card_background"
+        app:elevation="8dp"
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemRippleColor="#1A1769E8"
+        app:itemTextAppearanceActive="@style/BottomNavTextStyleActive"
+        app:itemTextAppearanceInactive="@style/BottomNavTextStyleInactive"
+        app:itemTextColor="@color/nav_item_color"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="160dp"
+    android:viewportWidth="360"
+    android:viewportHeight="160">
+    <!-- Back Wave Light -->
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M0,80 C60,50 140,110 220,70 C280,40 330,60 360,70 L360,160 L0,160 Z" />
+    <!-- Middle Wave -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M0,100 C80,60 160,120 250,85 C310,65 340,90 360,95 L360,160 L0,160 Z" />
+    <!-- Front Wave Dark/Primary -->
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M0,115 C90,85 180,135 270,105 C320,90 345,105 360,110 L360,160 L0,160 Z" />
+</vector>
