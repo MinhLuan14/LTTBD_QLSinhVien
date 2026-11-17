@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardSubjectItem"
+    style="@style/Widget.EduSync.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_normal"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="@dimen/spacing_normal"
+    android:layout_marginBottom="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <!-- Left Subject Icon Badge -->
+        <FrameLayout
+            android:id="@+id/flSubjectIconContainer"
+            android:layout_width="@dimen/badge_icon_size"
+            android:layout_height="@dimen/badge_icon_size"
+            android:background="@drawable/bg_icon_badge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivSubjectIcon"
+                android:layout_width="@dimen/badge_icon_inner_size"
+                android:layout_height="@dimen/badge_icon_inner_size"
+                android:layout_gravity="center"
+                android:contentDescription="@string/title_subject_management"
+                android:src="@drawable/ic_book"
+                app:tint="@color/primary" />
+        </FrameLayout>
+
+        <!-- Subject Name -->
+        <TextView
+            android:id="@+id/tvSubjectName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_item_title"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/llSubjectCredits"
+            app:layout_constraintEnd_toStartOf="@id/ivChevron"
+            app:layout_constraintStart_toEndOf="@id/flSubjectIconContainer"
+            app:layout_constraintTop_toTopOf="@id/flSubjectIconContainer"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Lập trình Java" />
+
+        <!-- Credits Badge / Info -->
+        <LinearLayout
+            android:id="@+id/llSubjectCredits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/flSubjectIconContainer"
+            app:layout_constraintStart_toEndOf="@id/flSubjectIconContainer"
+            app:layout_constraintTop_toBottomOf="@id/tvSubjectName">
+
+            <TextView
+                android:id="@+id/tvSubjectCredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_size_subtitle"
+                tools:text="3 tín chỉ" />
+        </LinearLayout>
+
+        <!-- Right Chevron Navigation Arrow -->
+        <ImageView
+            android:id="@+id/ivChevron"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon_tint_secondary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
