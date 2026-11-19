@@ -36,4 +36,83 @@
     <string name="action_courses">Học phần</string>
     <string name="sample_activity_title">Nhập điểm học phần</string>
     <string name="sample_activity_desc">Lập trình Java – HK1</string>
+
+    <!-- Common (dùng chung) -->
+    <string name="btn_back">Quay lại</string>
+
+    <!-- Statistics & Profile (Nhóm 05) -->
+    <!-- 17. fragment_statistics.xml -->
+    <string name="title_statistics">Thống kê Kết quả</string>
+    <string name="tab_semester">Học kỳ</string>
+    <string name="tab_cumulative">Tích lũy</string>
+    <string name="label_avg_study_result">ĐTB kết quả học tập</string>
+    <string name="sample_pass_rate">85%</string>
+    <string name="rank_excellent">Giỏi</string>
+    <string name="rank_good">Khá</string>
+    <string name="rank_average">Trung bình</string>
+    <string name="rank_weak">Yếu</string>
+    <string name="label_study_result_chart">Biểu đồ kết quả học tập</string>
+    <string name="axis_y_100">100</string>
+    <string name="axis_y_80">80</string>
+    <string name="axis_y_4">4</string>
+    <string name="axis_y_2">2</string>
+    <string name="axis_y_0">0</string>
+    <string name="semester_hk1">HK1</string>
+    <string name="semester_hk2">HK2</string>
+    <string name="semester_hk3">HK3</string>
+    <string name="semester_hk4">HK4</string>
+
+    <!-- 18. fragment_profile.xml -->
+    <string name="title_profile">Thông tin Cá nhân</string>
+    <string name="sample_profile_name">Nguyễn Minh Luân</string>
+    <string name="sample_profile_role">Sinh viên</string>
+    <string name="menu_app_info">Thông tin ứng dụng</string>
+    <string name="menu_theme_settings">Cài đặt giao diện</string>
+    <string name="menu_support">Liên hệ hỗ trợ</string>
+    <string name="menu_logout">Đăng xuất</string>
+
+    <!-- 19. activity_app_info.xml -->
+    <string name="title_app_info">Thông tin ứng dụng</string>
+    <string name="app_version_badge">Phiên bản 1.0.0</string>
+    <string name="app_slogan">“Tri thức hôm nay – Thành công ngày mai”</string>
+    <string name="section_about_app">Giới thiệu ứng dụng</string>
+    <string name="desc_about_app">EduSync là ứng dụng Android hỗ trợ quản lý thông tin sinh viên, lớp học, môn học và điểm học phần. Ứng dụng giúp lưu trữ, tra cứu và thống kê kết quả học tập một cách thuận tiện, trực quan và hiệu quả.</string>
+    <string name="section_main_features">Tính năng nổi bật</string>
+    <string name="feature_student_class">Quản lý Sinh viên và Lớp học</string>
+    <string name="feature_subject_course">Quản lý Môn học và Học phần</string>
+    <string name="feature_grade_lookup">Nhập điểm và Tra cứu điểm học phần</string>
+    <string name="feature_statistics_rank">Thống kê biểu đồ và Xếp loại học lực</string>
+    <string name="section_dev_info">Thông tin phát triển</string>
+    <string name="label_course_project">Học phần</string>
+    <string name="value_course_project">Lập trình thiết bị di động</string>
+    <string name="label_platform">Nền tảng</string>
+    <string name="value_platform">Android (Java &amp; SQLite)</string>
+    <string name="label_support_email">Email hỗ trợ</string>
+    <string name="value_support_email">support@edusync.edu.vn</string>
+    <string name="app_copyright">© 2026 EduSync. All rights reserved.</string>
+
+    <!-- 20. activity_settings.xml -->
+    <string name="title_settings">Cài đặt ứng dụng</string>
+    <string name="section_appearance_settings">Cài đặt giao diện</string>
+    <string name="setting_dark_mode">Chế độ tối (Dark Mode)</string>
+    <string name="setting_dark_mode_sub">Giao diện tối giúp bảo vệ mắt ban đêm</string>
+    <string name="setting_system_theme">Tự động theo hệ thống</string>
+    <string name="setting_system_theme_sub">Đồng bộ giao diện sáng/tối theo thiết bị</string>
+    <string name="setting_font_size">Kích thước chữ</string>
+    <string name="setting_font_size_sub">Mặc định (100%)</string>
+    <string name="setting_language">Ngôn ngữ hiển thị</string>
+    <string name="setting_language_sub">Tiếng Việt</string>
+    <string name="section_app_settings">Thông báo &amp; Học tập</string>
+    <string name="setting_notifications">Thông báo nhắc nhở</string>
+    <string name="setting_notifications_sub">Nhận thông báo khi cập nhật điểm học phần</string>
+    <string name="setting_grade_scale">Thang điểm hiển thị</string>
+    <string name="setting_grade_scale_sub">Hệ 10 (0.0 – 10.0)</string>
+    <string name="setting_auto_backup">Tự động sao lưu dữ liệu</string>
+    <string name="setting_auto_backup_sub">Sao lưu cơ sở dữ liệu SQLite cục bộ</string>
+    <string name="section_security_data">Bảo mật &amp; Dữ liệu</string>
+    <string name="setting_change_password">Đổi mật khẩu</string>
+    <string name="setting_change_password_sub">Cập nhật mật khẩu tài khoản đăng nhập</string>
+    <string name="setting_reset_default">Khôi phục cài đặt mặc định</string>
+    <string name="setting_reset_default_sub">Đặt lại toàn bộ tùy chỉnh giao diện và ứng dụng</string>
+    <string name="btn_save_settings">Lưu cài đặt</string>
 </resources>

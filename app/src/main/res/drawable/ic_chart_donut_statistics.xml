@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="140dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Subtle inner shadow ring -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M 60,16 A 44,44 0 1,1 59.9,16"
+        android:strokeWidth="18"
+        android:strokeColor="#F1F5F9" />
+
+    <!-- Segment 1: Blue (Left half: Bottom -> Left -> Top) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M 60,104 A 44,44 0 0,1 16,60 A 44,44 0 0,1 60,16"
+        android:strokeWidth="18"
+        android:strokeColor="#1769E8" />
+
+    <!-- Segment 2: Orange / Yellow (Top -> Upper Right) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M 60,16 A 44,44 0 0,1 101.3,45.0"
+        android:strokeWidth="18"
+        android:strokeColor="#F59E0B" />
+
+    <!-- Segment 3: Green (Upper Right -> Lower Right) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M 101.3,45.0 A 44,44 0 0,1 91.1,91.1"
+        android:strokeWidth="18"
+        android:strokeColor="#16A779" />
+
+    <!-- Segment 4: Coral / Red (Lower Right -> Bottom) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M 91.1,91.1 A 44,44 0 0,1 60,104"
+        android:strokeWidth="18"
+        android:strokeColor="#EF4444" />
+
+    <!-- Inner white circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 60,60 m -32,0 a 32,32 0 1,0 64,0 a 32,32 0 1,0 -64,0" />
+</vector>
