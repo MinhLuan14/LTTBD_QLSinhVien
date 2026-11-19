@@ -34,6 +34,25 @@
     <color name="nav_active">#1769E8</color>
     <color name="nav_inactive">#94A3B8</color>
 
+    <!-- Shared Surface / Status Colors (Nhóm 05) -->
+    <color name="primary_dark">#0F52BA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="border_card">#EEF2F6</color>
+    <color name="icon_tint_secondary">#94A3B8</color>
+    <color name="warning">#F59E0B</color>
+    <color name="warning_light">#FEF3C7</color>
+    <color name="error">#EF4444</color>
+    <color name="error_light">#FEE2E2</color>
+
+    <!-- Chart Colors (Nhóm 05) -->
+    <color name="chart_excellent">#16A779</color>
+    <color name="chart_good">#1769E8</color>
+    <color name="chart_average">#F59E0B</color>
+    <color name="chart_weak">#EF4444</color>
+    <color name="chart_bar_top">#3B82F6</color>
+    <color name="chart_bar_bottom">#1769E8</color>
+    <color name="chart_grid_line">#E2E8F0</color>
+
     <!-- Default System Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

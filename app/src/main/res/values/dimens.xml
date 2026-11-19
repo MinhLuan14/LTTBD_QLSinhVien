@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">12dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_xlarge">24dp</dimen>
+    <dimen name="spacing_xxlarge">32dp</dimen>
+
+    <!-- Corner Radii -->
+    <dimen name="radius_small">8dp</dimen>
+    <dimen name="radius_medium">12dp</dimen>
+    <dimen name="radius_input">14dp</dimen>
+    <dimen name="radius_card">16dp</dimen>
+    <dimen name="radius_large">20dp</dimen>
+    <dimen name="radius_search_bar">24dp</dimen>
+    <dimen name="radius_button">26dp</dimen>
+    <dimen name="radius_full">999dp</dimen>
+
+    <!-- Component Sizes -->
+    <dimen name="header_height">110dp</dimen>
+    <dimen name="search_box_height">50dp</dimen>
+    <dimen name="button_height_primary">52dp</dimen>
+    <dimen name="badge_icon_size">48dp</dimen>
+    <dimen name="badge_icon_inner_size">24dp</dimen>
+    <dimen name="form_header_icon_size">80dp</dimen>
+    <dimen name="fab_margin">20dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="elevation_fab">6dp</dimen>
+
+    <!-- Typography Text Sizes -->
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_item_title">16sp</dimen>
+    <dimen name="text_size_body">15sp</dimen>
+    <dimen name="text_size_subtitle">13sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+</resources>
