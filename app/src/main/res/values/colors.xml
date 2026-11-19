@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Design System Colors -->
+    <!-- Màu chính: #1769E8 (Nút chính, thanh điều hướng, tiêu đề/điểm nhấn) -->
+    <color name="primary">#1769E8</color>
+    <color name="primary_dark">#1054C2</color>
+    <color name="primary_light">#EEF4FF</color>
+
+    <!-- Màu nền: #F4F7FC (Nền tổng thể của màn hình) -->
+    <color name="background">#F4F7FC</color>
+
+    <!-- Màu thẻ: #FFFFFF (Card, vùng nội dung, form) -->
+    <color name="card_bg">#FFFFFF</color>
+
+    <!-- Màu thành công: #16A779 (Lưu thành công, kết quả đạt) -->
+    <color name="success">#16A779</color>
+    <color name="success_light">#E8F8F2</color>
+
+    <!-- Màu chữ: #172554 (Tiêu đề và nội dung chính) -->
+    <color name="text_primary">#172554</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#64748B</color>
+
+    <!-- Border & Inputs -->
+    <color name="border_color">#E2E8F0</color>
+    <color name="input_bg">#F8FAFC</color>
 </resources>

@@ -1,3 +1,30 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EduSync</string>
+    <string name="grade_entry_title">Nhập Điểm Học phần</string>
+    <string name="student_name_sample">Nguyễn Minh Anh</string>
+    <string name="student_id_sample">MSSV: 21510001</string>
+    <string name="student_class_sample">Lớp: CNTT01</string>
+    <string name="label_subject">Học phần</string>
+    <string name="sample_subject">Lập trình Java</string>
+    <string name="label_semester">Học kỳ</string>
+    <string name="sample_semester" tools:ignore="TypographyDashes">HK1 - 2026–2027</string>
+    <string name="label_process_score">Điểm quá trình (%)</string>
+    <string name="label_exam_score">Điểm thi (%)</string>
+    <string name="label_final_score">Điểm tổng kết</string>
+    <string name="status_pass">Đạt</string>
+    <string name="formula_sample">40% + 60% = 8.4</string>
+    <string name="btn_save">Lưu</string>
+
+    <!-- Tra cứu điểm -->
+    <string name="grade_lookup_title">Tra cứu Điểm</string>
+    <string name="search_hint">Tìm theo MSSV hoặc tên…</string>
+    <string name="tab_semester_1">Học kỳ 1</string>
+    <string name="tab_semester_2">Học kỳ 2</string>
+    <string name="tab_summary">Tổng kết</string>
+    <string name="col_subject">Môn học</string>
+    <string name="col_grade">Điểm TK</string>
+    <string name="col_credits">Tín chỉ</string>
+    <string name="label_gpa_semester">ĐTB HK</string>
+    <string name="label_gpa_cumulative">ĐTB TL</string>
+    <string name="label_classification">Xếp loại: Giỏi</string>
 </resources>
