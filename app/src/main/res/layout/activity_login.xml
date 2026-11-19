@@ -5,7 +5,7 @@
     android:id="@+id/loginScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="#FFFFFF"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,10 +17,10 @@
         <ImageView
             android:id="@+id/imgLoginHeaderWave"
             android:layout_width="0dp"
-            android:layout_height="180dp"
+            android:layout_height="170dp"
             android:contentDescription="@null"
             android:scaleType="fitXY"
-            android:src="@drawable/bg_login_header_wave"
+            android:src="@drawable/img_login_header"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/login_title"
-            android:textColor="@color/text_primary"
+            android:textColor="#1E3A8A"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
             <LinearLayout
                 android:id="@+id/llUsernameInput"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="54dp"
                 android:background="@drawable/bg_input"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
@@ -84,7 +84,7 @@
                     android:layout_height="22dp"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_person"
-                    app:tint="@color/text_hint" />
+                    app:tint="#2563EB" />
 
                 <EditText
                     android:id="@+id/edtUsername"
@@ -108,7 +108,7 @@
             <LinearLayout
                 android:id="@+id/llPasswordInput"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_input"
                 android:gravity="center_vertical"
@@ -122,7 +122,7 @@
                     android:layout_height="22dp"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_lock"
-                    app:tint="@color/text_hint" />
+                    app:tint="#2563EB" />
 
                 <EditText
                     android:id="@+id/edtPassword"
@@ -150,7 +150,7 @@
                     android:contentDescription="@null"
                     android:focusable="true"
                     android:src="@drawable/ic_visibility"
-                    app:tint="@color/text_hint" />
+                    app:tint="#94A3B8" />
             </LinearLayout>
 
             <!-- Remember Me & Forgot Password Row -->
@@ -166,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:buttonTint="@color/primary"
+                    android:buttonTint="#2563EB"
                     android:fontFamily="sans-serif"
                     android:text="@string/remember_login"
                     android:textColor="@color/text_secondary"
@@ -184,7 +184,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:padding="6dp"
                     android:text="@string/forgot_password"
-                    android:textColor="@color/primary"
+                    android:textColor="#2563EB"
                     android:textSize="13sp" />
             </RelativeLayout>
 
@@ -193,7 +193,7 @@
                 android:id="@+id/tvLoginNotification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:gravity="center"
                 android:textColor="#DC2626"
                 android:textSize="13sp"
@@ -201,19 +201,20 @@
                 tools:text="Tên đăng nhập hoặc mật khẩu không chính xác"
                 tools:visibility="visible" />
 
-            <!-- Login Button -->
+            <!-- Login Button with Arrow -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/primary"
+                android:layout_height="54dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button_primary"
                 android:fontFamily="sans-serif-bold"
                 android:text="@string/btn_login"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:cornerRadius="16dp"
+                app:backgroundTint="@null"
+                app:cornerRadius="26dp"
                 app:icon="@drawable/ic_arrow_forward"
                 app:iconGravity="textEnd"
                 app:iconPadding="10dp"
@@ -225,11 +226,11 @@
         <ImageView
             android:id="@+id/imgLoginFooter"
             android:layout_width="0dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="32dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
             android:contentDescription="@null"
             android:scaleType="fitXY"
-            android:src="@drawable/bg_login_footer"
+            android:src="@drawable/img_login_campus"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
