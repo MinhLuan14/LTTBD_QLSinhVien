@@ -1,4 +1,4 @@
-package vhu.edu.edusync;
+package vhu.edu.edusync.data.model;
 
 public class GradeItem {
     private final String subjectName;

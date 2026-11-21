@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="110dp"
+    android:viewportWidth="360"
+    android:viewportHeight="110">
+
+    <!-- Soft Blue Background Cloud Waves -->
+    <path
+        android:fillColor="#EBF2FE"
+        android:pathData="M0,55 Q60,30 120,48 T240,42 T360,52 L360,110 L0,110 Z" />
+
+    <!-- Left Wing Building -->
+    <path
+        android:fillColor="#BFDBFE"
+        android:pathData="M58,52 L125,52 L125,95 L58,95 Z" />
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M54,46 L128,46 L125,52 L58,52 Z" />
+
+    <!-- Right Wing Building -->
+    <path
+        android:fillColor="#BFDBFE"
+        android:pathData="M235,52 L302,52 L302,95 L235,95 Z" />
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M232,46 L306,46 L302,52 L235,52 Z" />
+
+    <!-- Wing Windows (Left) -->
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M70,60 h10 v12 h-10 z M88,60 h10 v12 h-10 z M106,60 h10 v12 h-10 z M70,78 h10 v12 h-10 z M88,78 h10 v12 h-10 z M106,78 h10 v12 h-10 z" />
+
+    <!-- Wing Windows (Right) -->
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M244,60 h10 v12 h-10 z M262,60 h10 v12 h-10 z M280,60 h10 v12 h-10 z M244,78 h10 v12 h-10 z M262,78 h10 v12 h-10 z M280,78 h10 v12 h-10 z" />
+
+    <!-- Center Main Hall Body -->
+    <path
+        android:fillColor="#DBEAFE"
+        android:pathData="M122,36 L238,36 L238,95 L122,95 Z" />
+
+    <!-- Center Roof Pediment (Triangle) -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M114,36 L180,10 L246,36 Z" />
+    <path
+        android:fillColor="#EFF6FF"
+        android:pathData="M126,33 L180,14 L234,33 Z" />
+
+    <!-- Pediment Clock / Emblem -->
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M180,25 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" />
+
+    <!-- Pillars / Columns -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M134,42 h8 v48 h-8 z M156,42 h8 v48 h-8 z M196,42 h8 v48 h-8 z M218,42 h8 v48 h-8 z" />
+
+    <!-- Main Arch Entrance Door -->
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M170,66 A10,10 0 0,1 190,66 L190,95 L170,95 Z" />
+
+    <!-- Green Trees Left & Right -->
+    <path
+        android:fillColor="#16A779"
+        android:pathData="M34,74 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M52,80 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+    <path
+        android:fillColor="#16A779"
+        android:pathData="M326,74 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M308,80 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Foreground Blue & Green Lawn Waves -->
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M0,92 Q90,82 180,92 T360,90 L360,110 L0,110 Z" />
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M0,100 Q120,90 240,100 T360,96 L360,110 L0,110 Z" />
+</vector>

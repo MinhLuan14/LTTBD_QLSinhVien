@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -11,28 +12,53 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EduSync">
 
-        <!-- Màn hình Tra cứu điểm: GradeLookupActivity (Khởi chạy chính) -->
+        <!-- Màn hình khởi chạy -->
         <activity
-            android:name=".GradeLookupActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".ui.admin.splash.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Màn hình Nhập điểm: GradeEntryActivity -->
+        <!-- Đăng nhập -->
         <activity
-            android:name=".GradeEntryActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".MainActivity"
+            android:name=".ui.auth.LoginActivity"
             android:exported="false" />
 
+        <!-- Trang chủ -->
+        <activity
+            android:name=".ui.admin.main.MainActivity"
+            android:exported="false" />
+
+        <!-- Các màn hình khác -->
+        <activity
+            android:name=".ui.admin.grade.GradeEntryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.admin.grade.GradeLookupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.student.StudentListActivity"
+            android:exported="false" />
+        <!-- Quản lý khoa -->
+        <activity
+            android:name=".ui.admin.department.DepartmentListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.admin.department.DepartmentFormActivity"
+            android:exported="false" />
+        <!-- Quản lý chuyên ngành -->
+        <activity
+            android:name=".ui.admin.major.MajorListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.admin.major.MajorFormActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

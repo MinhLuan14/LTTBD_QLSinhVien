@@ -1,4 +1,4 @@
-package vhu.edu.edusync;
+package vhu.edu.edusync.ui.admin.grade;
 
 import android.os.Bundle;
 
@@ -12,6 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import vhu.edu.edusync.adapter.GradeAdapter;
+import vhu.edu.edusync.data.model.GradeItem;
+import vhu.edu.edusync.R;
 
 public class GradeLookupActivity extends AppCompatActivity {
 

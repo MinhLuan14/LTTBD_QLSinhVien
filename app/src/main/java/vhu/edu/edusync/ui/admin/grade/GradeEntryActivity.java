@@ -1,4 +1,4 @@
-package vhu.edu.edusync;
+package vhu.edu.edusync.ui.admin.grade;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import vhu.edu.edusync.R;
 
 public class GradeEntryActivity extends AppCompatActivity {
 

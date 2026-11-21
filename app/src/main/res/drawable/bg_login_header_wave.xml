@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="180dp"
+    android:viewportWidth="360"
+    android:viewportHeight="180">
+    <path
+        android:fillColor="#BFDBFE"
+        android:pathData="M0,0 L360,0 L360,110 C300,160 210,100 130,140 C80,165 30,145 0,150 Z" />
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M0,0 L360,0 L360,95 C280,140 200,90 120,130 C70,150 25,120 0,130 Z" />
+    <path
+        android:fillColor="#1D4ED8"
+        android:pathData="M0,0 L360,0 L360,80 C260,120 180,75 100,110 C50,130 20,105 0,115 Z" />
+    <!-- White Cap Logo in Wave -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M180,42 L216,56 L180,70 L144,56 Z" />
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M158,63 L158,74 C158,82 168,88 180,88 C192,88 202,82 202,74 L202,63 L180,70 Z" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:pathData="M208,58 L210,72" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M209,72 C209,73.5 210,75 211.5,75 C213,75 214,73.5 214,72 Z" />
+</vector>

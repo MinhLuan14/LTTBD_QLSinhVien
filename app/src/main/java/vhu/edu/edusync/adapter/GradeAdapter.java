@@ -1,4 +1,4 @@
-package vhu.edu.edusync;
+package vhu.edu.edusync.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import vhu.edu.edusync.data.model.GradeItem;
+import vhu.edu.edusync.R;
 
 public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHolder> {
 
