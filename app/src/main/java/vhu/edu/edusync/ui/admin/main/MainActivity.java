@@ -11,6 +11,7 @@ import androidx.core.view.WindowCompat;
 import vhu.edu.edusync.R;
 import vhu.edu.edusync.data.database.DatabaseHelper;
 import vhu.edu.edusync.ui.admin.classroom.ClassListActivity;
+import vhu.edu.edusync.ui.admin.course.CourseListActivity;
 import vhu.edu.edusync.ui.admin.department.DepartmentListActivity;
 import vhu.edu.edusync.ui.admin.major.MajorListActivity;
 import vhu.edu.edusync.ui.admin.student.StudentListActivity;
@@ -70,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
 
 // Chuyển trang quản lý học phần
         btnQLHocPhan.setOnClickListener(v -> {
-           // Intent intent = new Intent(MainActivity.this, CourseListActivity.class);
-           // startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, CourseListActivity.class);
+            startActivity(intent);
         });
 
 // Chuyển trang quản lý khoa
