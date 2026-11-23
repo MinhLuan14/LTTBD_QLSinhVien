@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="120dp"
+    android:viewportWidth="360"
+    android:viewportHeight="120">
+    <!-- Base Water Wave -->
+    <path
+        android:fillColor="#DBEAFE"
+        android:pathData="M0,70 C60,50 140,85 220,60 C290,40 330,65 360,65 L360,120 L0,120 Z" />
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M0,85 C70,65 150,95 240,75 C300,60 340,80 360,82 L360,120 L0,120 Z" />
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M0,100 C90,80 180,105 270,90 C320,80 345,95 360,96 L360,120 L0,120 Z" />
+    <!-- Campus Silhouette (Trees & Buildings) -->
+    <!-- Dome Building Center -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M165,65 C165,52 195,52 195,65 L198,80 L162,80 Z" />
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M178,42 L182,42 L182,52 L178,52 Z" />
+    <!-- Pillars / Windows -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M168,68 L172,68 L172,78 L168,78 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M178,68 L182,68 L182,78 L178,78 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M188,68 L192,68 L192,78 L188,78 Z" />
+    <!-- Left Wing Building -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M135,68 L162,68 L162,82 L135,82 Z" />
+    <!-- Right Wing Building -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M198,68 L225,68 L225,82 L198,82 Z" />
+    <!-- Trees Greenish Silhouette -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M115,75 C115,68 122,65 128,68 C132,65 138,68 138,75 L115,75 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M222,75 C222,68 228,65 234,68 C238,65 244,68 244,75 L222,75 Z" />
+</vector>

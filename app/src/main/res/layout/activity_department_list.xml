@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/primary"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/btnBackDepartment"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Quay lại"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Quản lý Khoa"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Search -->
+    <EditText
+        android:id="@+id/edtSearchDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="Tìm kiếm theo mã hoặc tên khoa..."
+        android:drawablePadding="8dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" />
+
+    <!-- Department count -->
+    <TextView
+        android:id="@+id/tvDepartmentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Danh sách khoa"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/tvDepartmentEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="Chưa có dữ liệu khoa"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- Department list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"
+        android:overScrollMode="never" />
+
+    <!-- Add button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddDepartment"
+        style="@style/Widget.EduSync.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_primary"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="+ Thêm khoa"
+        app:cornerRadius="@dimen/radius_button" />
+
+</LinearLayout>

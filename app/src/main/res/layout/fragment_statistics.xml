@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Top Header App Bar -->
+        <FrameLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:paddingTop="36dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/spacing_normal"
+                android:paddingEnd="@dimen/spacing_normal">
+
+                <!-- Back Navigation Button -->
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/btn_back"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <!-- Screen Title -->
+                <TextView
+                    android:id="@+id/tvScreenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/title_statistics"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnBack"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <!-- Scrollable Statistics Content -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerContainer">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardStatisticsContainer"
+                style="@style/Widget.EduSync.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="@dimen/radius_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Filter Tabs: Học kỳ | Tích lũy -->
+                    <LinearLayout
+                        android:id="@+id/llStatisticsTabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp">
+
+                        <TextView
+                            android:id="@+id/btnTabSemester"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_tab_pill_active"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:text="@string/tab_semester"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTabCumulative"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_tab_pill_inactive"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:text="@string/tab_cumulative"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Section 1: Donut Chart & Academic Rank Legend -->
+                    <TextView
+                        android:id="@+id/tvDonutTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/label_avg_study_result"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp">
+
+                        <!-- Left Donut Chart -->
+                        <FrameLayout
+                            android:id="@+id/flDonutChart"
+                            android:layout_width="148dp"
+                            android:layout_height="148dp">
+
+                            <ImageView
+                                android:id="@+id/ivDonutChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/label_avg_study_result"
+                                android:src="@drawable/ic_chart_donut_statistics" />
+
+                            <TextView
+                                android:id="@+id/tvAveragePercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/sample_pass_rate"
+                                android:textColor="@color/text_primary"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <!-- Right Classification Legend -->
+                        <LinearLayout
+                            android:id="@+id/llRankLegend"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Giỏi -->
+                            <LinearLayout
+                                android:id="@+id/llLegendExcellent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/bg_dot_excellent" />
+
+                                <TextView
+                                    android:id="@+id/tvLegendExcellent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/rank_excellent"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Khá -->
+                            <LinearLayout
+                                android:id="@+id/llLegendGood"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/bg_dot_good" />
+
+                                <TextView
+                                    android:id="@+id/tvLegendGood"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/rank_good"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Trung bình -->
+                            <LinearLayout
+                                android:id="@+id/llLegendAverage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/bg_dot_average" />
+
+                                <TextView
+                                    android:id="@+id/tvLegendAverage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/rank_average"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Yếu -->
+                            <LinearLayout
+                                android:id="@+id/llLegendWeak"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/bg_dot_weak" />
+
+                                <TextView
+                                    android:id="@+id/tvLegendWeak"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/rank_weak"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/divider" />
+
+                    <!-- Section 2: Bar Chart ("Biểu đồ kết quả học tập") -->
+                    <TextView
+                        android:id="@+id/tvBarChartTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/label_study_result_chart"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Bar Chart Area -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clBarChartContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="8dp">
+
+                        <!-- Y-Axis Labels Column -->
+                        <LinearLayout
+                            android:id="@+id/llYAxisLabels"
+                            android:layout_width="30dp"
+                            android:layout_height="160dp"
+                            android:gravity="end"
+                            android:orientation="vertical"
+                            android:weightSum="4"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="top|end"
+                                android:text="@string/axis_y_100"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="top|end"
+                                android:text="@string/axis_y_80"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="top|end"
+                                android:text="@string/axis_y_4"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="top|end"
+                                android:text="@string/axis_y_2"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="bottom|end"
+                                android:text="@string/axis_y_0"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Plot Grid & Bars Frame -->
+                        <FrameLayout
+                            android:id="@+id/flChartPlotArea"
+                            android:layout_width="0dp"
+                            android:layout_height="160dp"
+                            android:layout_marginStart="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/llYAxisLabels"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <!-- Horizontal Grid Lines -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="4">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/chart_grid_line" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/chart_grid_line" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/chart_grid_line" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/chart_grid_line" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:background="@color/border_color" />
+                            </LinearLayout>
+
+                            <!-- 4 Vertical Semester Bars -->
+                            <LinearLayout
+                                android:id="@+id/llChartBars"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:orientation="horizontal"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="2dp">
+
+                                <!-- HK1 Bar -->
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <View
+                                        android:id="@+id/viewBarHk1"
+                                        android:layout_width="30dp"
+                                        android:layout_height="84dp"
+                                        android:layout_gravity="bottom|center_horizontal"
+                                        android:background="@drawable/bg_chart_bar" />
+                                </FrameLayout>
+
+                                <!-- HK2 Bar -->
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <View
+                                        android:id="@+id/viewBarHk2"
+                                        android:layout_width="30dp"
+                                        android:layout_height="118dp"
+                                        android:layout_gravity="bottom|center_horizontal"
+                                        android:background="@drawable/bg_chart_bar" />
+                                </FrameLayout>
+
+                                <!-- HK3 Bar -->
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <View
+                                        android:id="@+id/viewBarHk3"
+                                        android:layout_width="30dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="bottom|center_horizontal"
+                                        android:background="@drawable/bg_chart_bar" />
+                                </FrameLayout>
+
+                                <!-- HK4 Bar -->
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <View
+                                        android:id="@+id/viewBarHk4"
+                                        android:layout_width="30dp"
+                                        android:layout_height="140dp"
+                                        android:layout_gravity="bottom|center_horizontal"
+                                        android:background="@drawable/bg_chart_bar" />
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                        <!-- X-Axis Semester Labels (HK1 - HK4) -->
+                        <LinearLayout
+                            android:id="@+id/llXAxisLabels"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="@id/flChartPlotArea"
+                            app:layout_constraintStart_toStartOf="@id/flChartPlotArea"
+                            app:layout_constraintTop_toBottomOf="@id/flChartPlotArea">
+
+                            <TextView
+                                android:id="@+id/tvLabelHk1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/semester_hk1"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvLabelHk2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/semester_hk2"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvLabelHk3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/semester_hk3"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvLabelHk4"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/semester_hk4"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

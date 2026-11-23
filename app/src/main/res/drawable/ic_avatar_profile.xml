@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Outer Halo Circle -->
+    <path
+        android:fillColor="#DBEAFE"
+        android:pathData="M48,48m-46,0a46,46 0,1 1,92 0a46,46 0,1 1,-92 0" />
+
+    <!-- Inner Sky Circle -->
+    <path
+        android:fillColor="#EFF6FF"
+        android:pathData="M48,48m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0" />
+
+    <!-- Blue Student Jacket / Shoulders -->
+    <path
+        android:fillColor="#1769E8"
+        android:pathData="M20,82 C22,66 34,60 48,60 C62,60 74,66 76,82 C68,88 58,90 48,90 C38,90 28,88 20,82 Z" />
+
+    <!-- White Inner Shirt & Collar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,60 L48,74 L56,60 Z" />
+
+    <!-- Red/Navy Tie -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M46,63 L50,63 L51,75 L48,79 L45,75 Z" />
+
+    <!-- Neck -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M43,52 L53,52 L53,62 L43,62 Z" />
+
+    <!-- Ears -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M31,41 a4,5 0 1,0 8,0 a4,5 0 1,0 -8,0" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M57,41 a4,5 0 1,0 8,0 a4,5 0 1,0 -8,0" />
+
+    <!-- Face / Head -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M34,36 C34,26 40,22 48,22 C56,22 62,26 62,36 L62,43 C62,51 56,56 48,56 C40,56 34,51 34,43 Z" />
+
+    <!-- Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M33,38 C32,27 38,19 49,19 C58,19 64,25 63,37 C61,32 57,29 52,29 C46,29 41,32 36,34 C35,35 34,36 33,38 Z" />
+
+    <!-- Eyes -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M42,40 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M54,40 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+    <!-- Smile -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M44,48 Q48,52 52,48"
+        android:strokeWidth="2"
+        android:strokeColor="#C2410C"
+        android:strokeLineCap="round" />
+</vector>

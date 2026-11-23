@@ -238,7 +238,7 @@
                         android:textColorHint="@color/text_hint"
                         android:textSize="14sp" />
 
-                    <!-- Field 4: Khoa / Chuyên ngành -->
+                    <!-- Field 4: Khoa -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -257,26 +257,79 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:text="@string/label_class_department"
+                            android:text="Khoa"
                             android:textColor="@color/text_primary"
                             android:textSize="14sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <EditText
-                        android:id="@+id/edtClassDepartment"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.EduSync.TextInputLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:background="@drawable/bg_input_field"
-                        android:hint="@string/hint_class_department"
-                        android:imeOptions="actionNext"
-                        android:inputType="text"
-                        android:paddingStart="14dp"
-                        android:paddingEnd="14dp"
-                        android:textColor="@color/text_primary"
-                        android:textColorHint="@color/text_hint"
-                        android:textSize="14sp" />
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/actvClassDepartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:hint="Chọn khoa"
+                            android:inputType="none"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Field 5: Chuyên ngành -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_school"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Chuyên ngành"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.EduSync.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/actvClassMajor"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:hint="Chọn chuyên ngành"
+                            android:inputType="none"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
 
                     <!-- Field 5: Sĩ số dự kiến -->
                     <LinearLayout
