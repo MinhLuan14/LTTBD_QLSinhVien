@@ -40,9 +40,12 @@
             app:boxBackgroundColor="@color/input_background">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCourseCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nhập mã học phần"/>
+                android:hint="Nhập mã học phần"
+                android:inputType="textCapCharacters"
+                android:maxLines="1"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

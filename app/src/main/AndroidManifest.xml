@@ -59,6 +59,20 @@
         <activity
             android:name=".ui.admin.major.MajorFormActivity"
             android:exported="false" />
+
+        <!-- Quản lý môn học -->
+        <activity
+            android:name=".ui.admin.subject.SubjectListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.admin.subject.SubjectFormActivity"
+            android:exported="false" />
+
+        <!-- Quản lý học phần -->
+        <activity
+            android:name=".ui.admin.course.CourseListActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
