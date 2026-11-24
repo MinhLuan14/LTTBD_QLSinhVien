@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,6 +13,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +30,7 @@ import vhu.edu.edusync.data.repository.ChuyenNganhRepository;
 import vhu.edu.edusync.data.repository.KhoaRepository;
 import vhu.edu.edusync.model.ChuyenNganh;
 import vhu.edu.edusync.model.Khoa;
+import vhu.edu.edusync.ui.admin.main.MainActivity;
 
 public class MajorListActivity extends AppCompatActivity {
 
@@ -44,7 +50,17 @@ public class MajorListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        WindowCompat.enableEdgeToEdge(getWindow());
         setContentView(R.layout.activity_major_list);
+
+        View header = findViewById(R.id.headerMajor);
+        if (header != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(header, (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(v.getPaddingLeft(), systemBars.top + 16, v.getPaddingRight(), v.getPaddingBottom());
+                return insets;
+            });
+        }
 
         chuyenNganhRepository = new ChuyenNganhRepository(this);
         khoaRepository = new KhoaRepository(this);
@@ -86,7 +102,14 @@ public class MajorListActivity extends AppCompatActivity {
     }
 
     private void xuLySuKien() {
-        btnBackMajor.setOnClickListener(v -> finish());
+        btnBackMajor.setOnClickListener(v -> {
+            if (isTaskRoot()) {
+                Intent intent = new Intent(MajorListActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+            }
+            finish();
+        });
 
         findViewById(R.id.btnAddMajor).setOnClickListener(v -> {
             Intent intent = new Intent(

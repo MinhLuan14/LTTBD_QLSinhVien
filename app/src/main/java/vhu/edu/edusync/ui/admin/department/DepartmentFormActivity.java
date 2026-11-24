@@ -1,6 +1,7 @@
 
 package vhu.edu.edusync.ui.admin.department;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -81,7 +82,14 @@ public class DepartmentFormActivity extends AppCompatActivity {
     }
 
     private void xuLySuKien() {
-        btnBackDepartmentForm.setOnClickListener(v -> finish());
+        btnBackDepartmentForm.setOnClickListener(v -> {
+            if (isTaskRoot()) {
+                Intent intent = new Intent(DepartmentFormActivity.this, DepartmentListActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+            }
+            finish();
+        });
 
         btnSaveDepartment.setOnClickListener(v -> luuKhoa());
     }

@@ -27,7 +27,14 @@ public class GradeEntryActivity extends AppCompatActivity {
         });
 
         // Nút quay lại
-        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+        findViewById(R.id.btnBack).setOnClickListener(v -> {
+            if (isTaskRoot()) {
+                android.content.Intent intent = new android.content.Intent(GradeEntryActivity.this, vhu.edu.edusync.ui.admin.main.MainActivity.class);
+                intent.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP | android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+            }
+            finish();
+        });
 
         // Nút Lưu
         findViewById(R.id.btnSave).setOnClickListener(v ->

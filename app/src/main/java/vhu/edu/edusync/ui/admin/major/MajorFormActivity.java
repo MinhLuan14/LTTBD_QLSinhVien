@@ -1,6 +1,7 @@
 
 package vhu.edu.edusync.ui.admin.major;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -157,7 +158,14 @@ public class MajorFormActivity extends AppCompatActivity {
     }
 
     private void xuLySuKien() {
-        btnBackMajorForm.setOnClickListener(v -> finish());
+        btnBackMajorForm.setOnClickListener(v -> {
+            if (isTaskRoot()) {
+                Intent intent = new Intent(MajorFormActivity.this, MajorListActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+            }
+            finish();
+        });
 
         btnSaveMajor.setOnClickListener(v -> luuChuyenNganh());
     }

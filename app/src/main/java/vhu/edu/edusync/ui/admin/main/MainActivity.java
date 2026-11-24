@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
+import androidx.core.widget.NestedScrollView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.card.MaterialCardView;
@@ -22,6 +23,8 @@ import vhu.edu.edusync.ui.admin.account.AccountListActivity;
 import vhu.edu.edusync.ui.admin.classroom.ClassListActivity;
 import vhu.edu.edusync.ui.admin.course.CourseListActivity;
 import vhu.edu.edusync.ui.admin.department.DepartmentListActivity;
+import vhu.edu.edusync.ui.admin.grade.GradeEntryActivity;
+import vhu.edu.edusync.ui.admin.grade.GradeLookupActivity;
 import vhu.edu.edusync.ui.admin.major.MajorListActivity;
 import vhu.edu.edusync.ui.admin.student.StudentListActivity;
 import vhu.edu.edusync.ui.admin.subject.SubjectListActivity;
@@ -62,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
     private MaterialCardView btnQLKhoa;
     private MaterialCardView btnChuyenNganh;
     private MaterialCardView btnQLTaiKhoan;
+
+    private ImageView btnQuickAccessArrow;
+    private View rlQuickAccessHeader;
+    private NestedScrollView homeScrollView;
+
+    // Hoạt động gần đây
+    private MaterialCardView cardRecentActivity1;
+    private TextView btnSeeAllActivities;
 
     private BottomNavigationView bottomNavMain;
 
@@ -113,6 +124,13 @@ public class MainActivity extends AppCompatActivity {
         btnQLKhoa = findViewById(R.id.btnQLKhoa);
         btnChuyenNganh = findViewById(R.id.btnQLChuyenNganh);
         btnQLTaiKhoan = findViewById(R.id.btnQLTaiKhoan);
+
+        btnQuickAccessArrow = findViewById(R.id.btnQuickAccessArrow);
+        rlQuickAccessHeader = findViewById(R.id.rlQuickAccessHeader);
+        homeScrollView = findViewById(R.id.homeScrollView);
+
+        cardRecentActivity1 = findViewById(R.id.cardRecentActivity1);
+        btnSeeAllActivities = findViewById(R.id.btnSeeAllActivities);
 
         bottomNavMain = findViewById(R.id.bottomNavMain);
 
@@ -177,6 +195,28 @@ public class MainActivity extends AppCompatActivity {
         // Chuyển trang quản lý tài khoản (Nguyên phụ trách)
         if (btnQLTaiKhoan != null) {
             btnQLTaiKhoan.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AccountListActivity.class)));
+        }
+
+        // Mũi tên và tiêu đề "Truy cập nhanh"
+        View.OnClickListener quickAccessHeaderListener = v -> {
+            if (homeScrollView != null && rlQuickAccessHeader != null) {
+                homeScrollView.smoothScrollTo(0, rlQuickAccessHeader.getTop());
+            }
+            Toast.makeText(MainActivity.this, "Đang hiển thị các lối tắt truy cập nhanh", Toast.LENGTH_SHORT).show();
+        };
+        if (btnQuickAccessArrow != null) {
+            btnQuickAccessArrow.setOnClickListener(quickAccessHeaderListener);
+        }
+        if (rlQuickAccessHeader != null) {
+            rlQuickAccessHeader.setOnClickListener(quickAccessHeaderListener);
+        }
+
+        // Hoạt động gần đây: Nhập điểm học phần
+        if (cardRecentActivity1 != null) {
+            cardRecentActivity1.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, GradeEntryActivity.class)));
+        }
+        if (btnSeeAllActivities != null) {
+            btnSeeAllActivities.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, GradeLookupActivity.class)));
         }
 
         // Điều hướng Bottom Navigation
