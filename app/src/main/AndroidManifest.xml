@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EduSync">
 
-        <!-- Màn hình khởi chạy -->
+        <!-- Màn hình khởi chạy Splash -->
         <activity
             android:name=".ui.admin.splash.SplashActivity"
             android:exported="true">
@@ -27,41 +27,82 @@
             android:name=".ui.auth.LoginActivity"
             android:exported="false" />
 
-        <!-- Trang chủ -->
+        <!-- Đổi mật khẩu -->
+        <activity
+            android:name=".ui.auth.ChangePasswordActivity"
+            android:exported="true" />
+
+        <!-- Trang chủ Admin -->
         <activity
             android:name=".ui.admin.main.MainActivity"
-            android:exported="false" />
+            android:exported="true" />
 
-        <!-- Các màn hình khác -->
+        <!-- Trang chủ Sinh viên -->
         <activity
-            android:name=".ui.admin.grade.GradeEntryActivity"
-            android:exported="false" />
+            android:name=".ui.student.StudentMainActivity"
+            android:exported="true" />
 
+        <!-- Trang cá nhân dùng chung -->
         <activity
-            android:name=".ui.admin.grade.GradeLookupActivity"
-            android:exported="false" />
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="true" />
+
+        <!-- Quản lý tài khoản (Nguyên) -->
+        <activity
+            android:name=".ui.admin.account.AccountListActivity"
+            android:exported="true" />
+
+        <!-- Quản lý sinh viên (Hoàng) -->
         <activity
             android:name=".ui.admin.student.StudentListActivity"
-            android:exported="false" />
+            android:exported="true" />
+
         <activity
             android:name=".ui.admin.student.StudentFormActivity"
-            android:exported="false" />
+            android:exported="true" />
+
+        <!-- Quản lý lớp học -->
+        <activity
+            android:name=".ui.admin.classroom.ClassListActivity"
+            android:exported="true" />
+
+        <!-- Quản lý môn học -->
+        <activity
+            android:name=".ui.admin.subject.SubjectListActivity"
+            android:exported="true" />
+
+        <!-- Quản lý học phần -->
+        <activity
+            android:name=".ui.admin.course.CourseListActivity"
+            android:exported="true" />
+
         <!-- Quản lý khoa -->
         <activity
             android:name=".ui.admin.department.DepartmentListActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name=".ui.admin.department.DepartmentFormActivity"
-            android:exported="false" />
+            android:exported="true" />
+
         <!-- Quản lý chuyên ngành -->
         <activity
             android:name=".ui.admin.major.MajorListActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name=".ui.admin.major.MajorFormActivity"
-            android:exported="false" />
+            android:exported="true" />
+
+        <!-- Quản lý điểm -->
+        <activity
+            android:name=".ui.admin.grade.GradeEntryActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.admin.grade.GradeLookupActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>
