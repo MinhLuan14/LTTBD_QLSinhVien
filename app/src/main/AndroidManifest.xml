@@ -43,6 +43,9 @@
         <activity
             android:name=".ui.admin.student.StudentListActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.admin.student.StudentFormActivity"
+            android:exported="false" />
         <!-- Quản lý khoa -->
         <activity
             android:name=".ui.admin.department.DepartmentListActivity"
