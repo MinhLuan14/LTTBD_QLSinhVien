@@ -1,10 +1,14 @@
 package vhu.edu.edusync.ui.auth;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -32,6 +36,16 @@ public class ChangePasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
+
+        // Xử lý status bar insets để header không bị chìm dưới thanh trạng thái
+        View llHeader = findViewById(R.id.llHeader);
+        if (llHeader != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(llHeader, (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(v.getPaddingLeft(), systemBars.top, v.getPaddingRight(), v.getPaddingBottom());
+                return insets;
+            });
+        }
 
         sessionManager = new SessionManager(this);
         if (!sessionManager.isLoggedIn()) {

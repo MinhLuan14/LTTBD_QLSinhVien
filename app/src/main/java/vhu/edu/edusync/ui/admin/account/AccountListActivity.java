@@ -1,6 +1,7 @@
 package vhu.edu.edusync.ui.admin.account;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,6 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +36,7 @@ import vhu.edu.edusync.data.model.SinhVien;
 import vhu.edu.edusync.data.model.TaiKhoan;
 import vhu.edu.edusync.data.repository.TaiKhoanRepository;
 import vhu.edu.edusync.data.session.SessionManager;
+import vhu.edu.edusync.ui.admin.main.MainActivity;
 
 /**
  * Activity quản lý danh sách tài khoản, phân quyền, cấp tài khoản cho sinh viên,
@@ -70,6 +75,16 @@ public class AccountListActivity extends AppCompatActivity implements AccountAda
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_list);
+
+        // Xử lý status bar insets để header không bị chìm dưới thanh trạng thái
+        View llHeader = findViewById(R.id.llHeader);
+        if (llHeader != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(llHeader, (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(v.getPaddingLeft(), systemBars.top, v.getPaddingRight(), v.getPaddingBottom());
+                return insets;
+            });
+        }
 
         sessionManager = new SessionManager(this);
         // Kiểm tra phân quyền: Chỉ ADMIN mới được truy cập màn hình này
@@ -113,7 +128,14 @@ public class AccountListActivity extends AppCompatActivity implements AccountAda
     }
 
     private void setupListeners() {
-        imgBack.setOnClickListener(v -> finish());
+        imgBack.setOnClickListener(v -> {
+            if (isTaskRoot()) {
+                Intent intent = new Intent(AccountListActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+            }
+            finish();
+        });
 
         imgQuickAdd.setOnClickListener(v -> hienThiDialogCapTaiKhoan());
         fabGrantAccount.setOnClickListener(v -> hienThiDialogCapTaiKhoan());

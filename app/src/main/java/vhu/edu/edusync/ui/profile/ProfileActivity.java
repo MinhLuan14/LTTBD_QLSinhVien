@@ -8,6 +8,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
@@ -19,6 +22,7 @@ import vhu.edu.edusync.data.model.TaiKhoan;
 import vhu.edu.edusync.data.repository.SinhVienRepository;
 import vhu.edu.edusync.data.repository.TaiKhoanRepository;
 import vhu.edu.edusync.data.session.SessionManager;
+import vhu.edu.edusync.ui.admin.main.MainActivity;
 import vhu.edu.edusync.ui.auth.ChangePasswordActivity;
 import vhu.edu.edusync.ui.auth.LoginActivity;
 
@@ -58,6 +62,16 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        // Xử lý status bar insets để header không bị chìm dưới thanh trạng thái
+        View llHeader = findViewById(R.id.llHeader);
+        if (llHeader != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(llHeader, (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(v.getPaddingLeft(), systemBars.top, v.getPaddingRight(), v.getPaddingBottom());
+                return insets;
+            });
+        }
 
         sessionManager = new SessionManager(this);
         if (!sessionManager.isLoggedIn()) {
@@ -100,7 +114,14 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void setupListeners() {
-        imgBack.setOnClickListener(v -> finish());
+        imgBack.setOnClickListener(v -> {
+            if (isTaskRoot()) {
+                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+            }
+            finish();
+        });
 
         btnChangePassword.setOnClickListener(v -> {
             Intent intent = new Intent(ProfileActivity.this, ChangePasswordActivity.class);
