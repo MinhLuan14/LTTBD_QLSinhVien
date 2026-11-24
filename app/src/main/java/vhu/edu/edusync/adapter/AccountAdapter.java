@@ -65,14 +65,16 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountV
         // 2. Phân vai trò
         if (account.isAdmin()) {
             holder.tvAccountRoleBadge.setText("ADMIN");
-            holder.tvAccountRoleBadge.setBackgroundResource(R.drawable.bg_chip_selected);
+            holder.tvAccountRoleBadge.setTextColor(Color.WHITE);
+            holder.tvAccountRoleBadge.setBackgroundResource(R.drawable.bg_badge_admin);
             holder.tvAccountFullName.setText("Quản trị viên hệ thống");
             holder.tvAccountDetailInfo.setText("Mã TK: " + account.getMaTaiKhoan());
             holder.imgAccountAvatar.setImageResource(R.drawable.ic_person);
             holder.imgAccountAvatar.setBackgroundResource(R.drawable.bg_circle_purple);
         } else {
             holder.tvAccountRoleBadge.setText("SINH VIÊN");
-            holder.tvAccountRoleBadge.setBackgroundResource(R.drawable.bg_circle_blue);
+            holder.tvAccountRoleBadge.setTextColor(Color.parseColor("#3730A3"));
+            holder.tvAccountRoleBadge.setBackgroundResource(R.drawable.bg_badge_student);
             String fullName = account.getHoTenSinhVien();
             holder.tvAccountFullName.setText(fullName != null && !fullName.isEmpty() ? fullName : "Sinh viên");
 
